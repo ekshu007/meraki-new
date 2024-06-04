@@ -1,0 +1,447 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFDAB9; /* Light peach background */
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0; /* Increase padding to make the header bigger */
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 70px; /* Increase the height of the logo */
+    margin-right: 15px; /* Space between the logo and the heading */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.5em; /* Increase font size for the header title */
+}
+
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Add this line to vertically align the items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #ff6f61; 
+}
+
+
+/* Marquee */
+.marquee {
+    background-color: #eaa133; /* Yellowish orange background */
+    padding: 10px 0; /* Padding for the marquee */
+    text-align: center;
+    color: #333; /* Dark text color for better readability */
+}
+
+.image1 {
+    padding: 20px 50px; /* Add 20px padding above and below, and 50px padding left and right */
+    box-sizing: border-box; /* Ensure padding is included in the total width and height */
+}
+
+.image1 img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.story-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners */
+    display: block;
+    margin: auto;
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.about-us {
+    background-color: #fff; /* White background */
+    padding: 40px 20px; /* Increase padding for better spacing */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    margin: 20px auto; /* Center the section */
+    max-width: 800px; /* Limit the width for better readability */
+}
+
+.about-us h2 {
+    color: #333; /* Dark text color */
+}
+
+.about-us p {
+    color: #666; /* Lighter text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-links, .social-media, .contact-info {
+    margin: 10px 0;
+}
+
+.footer-links a, .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media a {
+    font-size: 1.5em; /* Adjust the size as needed */
+}
+
+.social-media a:hover {
+    color: #ff6f61; /* Change the color on hover */
+}
+
+.special-offers {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 60px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.special-offers h2 {
+    margin-bottom: 40px; /* Add space between heading and offer cards */
+    color: #333; /* Dark text color */
+}
+
+.offer-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-card {
+    margin: 0 20px; /* Add space between offer cards */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 8px; /* Add rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.offer-card img {
+    width: 100%;
+    height: auto;
+}
+
+.offer-details {
+    padding: 20px;
+}
+
+.offer-details h3 {
+    margin-bottom: 10px; /* Add space between heading and paragraph */
+    color: #333; /* Dark text color */
+}
+
+.offer-details p {
+    color: #666; /* Lighter text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #ff6f61; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.btn:hover {
+    background-color: #e05c4d; /* Darker color on hover */
+}
+
+.brand-story {
+    background-color: #fff; /* White background */
+    padding: 60px 20px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.story-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the section */
+    text-align: left; /* Align text to the left */
+}
+
+.story-image {
+    flex: 1; /* Take up half of the available width */
+    max-width: 50%; /* Limit to half the width */
+    padding: 20px; /* Add padding around the image */
+    height: calc(100% + 100px); /* Stretch the height by 100px */
+}
+
+.story-image img {
+    width: auto; /* Ensure the image fills the container horizontally */
+    max-width: 500px;
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 3000px; /* Set a maximum height for the image */
+    object-fit: contain; /* Maintain the aspect ratio and fit the image inside the container */
+    border-radius: 8px; /* Add rounded corners */
+    display: block;
+    margin: auto;
+}
+
+
+.story-text {
+    flex: 1; /* Take up half of the available width */
+    color: #666; /* Lighter text color */
+    line-height: 1.6; /* Improve readability */
+    padding: 20px; /* Add padding around the text */
+}
+
+.story-text p {
+    margin-bottom: 20px; /* Add space between paragraphs */
+}
+
+@media (min-width: 768px) {
+    .story-content {
+        flex-direction: row; /* Arrange children side by side */
+        text-align: left; /* Align text to the left */
+    }
+
+    .story-image {
+        margin-right: 20px; /* Add space between image and text */
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+
+    .story-text {
+        flex: 1;
+    }
+}
+
+/* Main Products Section */
+.main-products {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px; /* Adjust width as needed */
+}
+
+.main-products h2 {
+    color: #333;
+    margin-bottom: 40px; /* Space between heading and products */
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.product {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px; /* Adjust width as needed */
+    margin: 10px; /* Space around products */
+    flex: 1 0 21%; /* Flex properties for responsive design */
+    text-align: center;
+}
+
+.product img {
+    width: 150px; /* Set width to 150px */
+    height: 150px; /* Set height to 150px */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+
+.product h3 {
+    color: #333;
+    margin: 15px 0;
+}
+
+.product p {
+    color: #666;
+    padding: 0 10px;
+    margin: 0 0 15px 0;
+}
+
+.product .price {
+    color: #ff6f61;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+
+  
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  select {
+    height: 40px;
+  }
+  
+  /* Button Styles */
+  
+  button[type="submit"] {
+    background-color: #e09e45; /* Complementary shade */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #f0a54a; /* Lighter complementary shade */
+  }
+  
+  /* Header Styles */
+  
+  h1 {
+    text-align: center;
+  }
+
+/* Add this CSS to your existing style.css file */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropbtn:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+}

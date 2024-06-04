@@ -1,0 +1,223 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8; /* Light grey background */
+    margin: 0;
+    padding: 0;
+}
+
+.about-us {
+    background-color: #fff; /* White background */
+    padding: 40px 20px; /* Increase padding for better spacing */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    margin: 20px auto; /* Center the section */
+    max-width: 800px; /* Limit the width for better readability */
+}
+
+.about-us h2 {
+    color: #333; /* Dark text color */
+}
+
+.about-us p {
+    color: #666; /* Lighter text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.about-us {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-links, .social-media, .contact-info {
+    margin: 10px 0;
+}
+
+.footer-links a, .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media a {
+    font-size: 1.5em; /* Adjust the size as needed */
+}
+
+.social-media a:hover {
+    color: #ff6f61; /* Change the color on hover */
+}
+
+.special-offers {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 60px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.special-offers h2 {
+    margin-bottom: 40px; /* Add space between heading and offer cards */
+    color: #333; /* Dark text color */
+}
+
+.offer-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-card {
+    margin: 0 20px; /* Add space between offer cards */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 8px; /* Add rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.offer-card img {
+    width: 100%;
+    height: auto;
+}
+
+.offer-details {
+    padding: 20px;
+}
+
+.offer-details h3 {
+    margin-bottom: 10px; /* Add space between heading and paragraph */
+    color: #333; /* Dark text color */
+}
+
+.offer-details p {
+    color: #666; /* Lighter text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #ff6f61; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.btn:hover {
+    background-color: #e05c4d; /* Darker color on hover */
+}
+.brand-story {
+    background-color: #fff; /* White background */
+    padding: 60px 20px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.brand-story h2 {
+    margin-bottom: 40px; /* Add space between heading and content */
+    color: #333; /* Dark text color */
+}
+
+.story-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the section */
+    text-align: left; /* Align text to the left */
+}
+
+.story-image {
+    width: 100%;
+    max-width: 400px; /* Limit image width */
+    margin-bottom: 20px; /* Add space between image and text */
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners */
+}
+
+.story-text {
+    color: #666; /* Lighter text color */
+    line-height: 1.6; /* Improve readability */
+}
+
+.story-text p {
+    margin-bottom: 20px; /* Add space between paragraphs */
+}
+
+@media (min-width: 768px) {
+    .story-content {
+        flex-direction: row;
+        text-align: left; /* Align text to the left */
+    }
+
+    .story-image {
+        margin-right: 20px; /* Add space between image and text */
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+
+    .story-text {
+        flex: 1;
+    }
+}

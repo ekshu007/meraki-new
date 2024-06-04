@@ -1,0 +1,104 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f3e5ab; /* Changed to skin color */
+        color: #333; /* Changed text color to a dark grey */
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff5e1; /* Internal box color changed to a lighter skin color */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align the form */
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    select {
+        height: 40px;
+    }
+
+    button[type="submit"] {
+        background-color: #e09e45; /* Changed button color to a complementary shade */
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #f0a54a; /* Changed hover color to a lighter complementary shade */
+    }
+</style>
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="/submit_contact" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+            <label for="query_type">Type of Inquiry:</label>
+            <select id="query_type" name="query_type" required>
+                <option value="" disabled selected>Select</option>
+                <option value="Product Inquiry">Product Inquiry</option>
+                <option value="Order Issue">Order Issue</option>
+                <option value="Return/Refund">Return/Refund</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+  
+{%endblock%}

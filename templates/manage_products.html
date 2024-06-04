@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_1.css') }}">
+    <title>Manage Products</title>
+</head>
+<body>
+    <h1>Manage Products</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>{{ product.details }}</td>
+                    <td><img src="{{ url_for('static', filename='images/'+product.image) }}" alt="{{ product.name }}" style="max-width: 100px; max-height: 100px;"></td>
+                    <td>
+                        <form action="{{ url_for('edit_product', id=product.id) }}" method="post" enctype="multipart/form-data">
+                            <input type="text" name="name" placeholder="New Name" value="{{ product.name }}">
+                            <input type="text" name="price" placeholder="New Price" value="{{ product.price }}">
+                            <input type="text" name="category" placeholder="New Category" value="{{ product.category }}">
+                            <input type="number" name="quantity" placeholder="New Quantity" value="{{ product.quantity }}">
+                            <input type="text" name="details" placeholder="New Description" value="{{ product.details }}">
+                            <input type="file" name="image" accept="image/*">
+                            <br><button type="submit">Update</button>
+                        </form>
+                        <form action="{{ url_for('delete_product', id=product.id) }}" method="post">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('add_product') }}"><button>Come Back</button></a>
+</body>
+</html>

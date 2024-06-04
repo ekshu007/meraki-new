@@ -1,0 +1,110 @@
+<style>
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted grid columns */
+        grid-gap: 20px; /* Adjusted grid gap */
+        margin-left: 10px; /* Added margin to the left */
+        margin-right: 10px; /* Added margin to the right */
+    }
+    
+    
+        .product-card {
+            height:600px;
+            background-color: white; /* Set background color to white */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 0 0px; /* Add 10px padding to the left and right */
+        }
+        
+        
+    
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 2px 10px rgba(67, 201, 98, 0.1);
+            color:black
+        }
+    
+        .product-image {
+            border-radius: 25px;
+            width: 20px; /* Set width to 200px */
+            height: 100px; /* Set height to 300px */
+            object-fit: cover;
+            padding-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        
+        
+    
+        .product-details {
+            padding: 5px; /* Adjust padding to 5px */
+            text-align: center;
+            color: black; /* Set font color to black */
+        }
+        
+    
+        .product-title {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    
+        .product-price {
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    
+        .product-details button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .product-details button:hover {
+            background-color: #45a049;
+        }
+    </style>
+{% extends 'base.html' %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+    <form method="POST" action="{{ url_for('products') }}">
+        <label for="category">Select Category:</label>
+        <select id="category" name="categories">
+            <option value="">All Categories</option>
+            {% for category in categories %}
+                <option value="{{ category[0] }}">{{ category[0] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+
+    <div class="product-grid">
+        {% for product in products %}
+            {% if product.quantity > 0 %}
+                <div class="product-card">
+                    <img src="{{ url_for('static', filename='images/' + product.image) }}" alt="{{ product.name }}" class="product-image" id="product_image_{{ loop.index }}" onclick="magnifyImage('product_image_{{ loop.index }}')" style="width: 300px; height: 300px;">
+                    <div class="product-details">
+                        <h3 class="product-title">{{ product.name }}</h3>
+                        <p class="product-price">{{ product.details }}</p>
+                        <p class="product-price">$ {{ product.price }}</p>
+                        <p class="product-price">Quantity: {{ product.quantity }}</p>
+
+                        <form method="POST" action="{{ url_for('add_to_cart', product_id=product.id) }}">
+                            <button type="submit" style="display: block; width: 100px; margin-left: 0;">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

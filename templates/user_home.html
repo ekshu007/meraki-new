@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <!-- Marquee Section -->
+    <marquee behavior="scroll" direction="left" style="background-color: #d5d240; color: white; padding: 10px 0;">
+        Welcome to Meraki Handmade! Discover our range of natural skincare products and enjoy exclusive offers!
+    </marquee>
+
+    <div class="image1">
+        <img src="https://t4.ftcdn.net/jpg/03/91/74/79/360_F_391747975_rQ1BfB5UCdeROJfh7CyHL0HtXUOvH6my.jpg" alt="Your Image">
+    </div>
+    
+    <!-- About Us Section -->
+    <section id="about-us" class="about-us">
+        <h2>About Us</h2>
+        <p>At Meraki Handmade Skincare, we believe that beauty starts with healthy skin. Our mission is to provide you with high-quality skincare products that enhance your natural radiance and boost your confidence.</p>
+        <h3>Our Philosophy</h3>
+        <p>We understand that everyone's skin is unique, and that's why we've crafted our products with the utmost care, using only the finest ingredients sourced from nature. From luxurious cleansers and nourishing moisturizers to targeted treatments for specific concerns, each product in our range is designed to deliver visible results without compromise.</p>
+        <h3>Commitment to Quality</h3>
+        <p>Quality is at the heart of everything we do. We meticulously formulate our products in small batches to ensure freshness and potency. Our team of skincare experts and scientists work tirelessly to research and develop innovative solutions that address your skincare needs effectively and safely.</p>
+        <h3>Transparency and Sustainability</h3>
+        <p>We believe in transparency and honesty. You can trust that our products are free from harsh chemicals, parabens, and artificial fragrances. We are committed to sustainability and strive to minimize our environmental footprint by using eco-friendly packaging and reducing waste wherever possible.</p>
+        <h3>Empowering Confidence</h3>
+        <p>At Meraki Handmade, we are not just selling skincare products; we are empowering confidence. We want you to feel empowered to embrace your natural beauty and radiate confidence in your own skin. Our goal is to be your trusted partner on your skincare journey, providing you with the tools and knowledge to achieve your skincare goals.</p>
+        <h3>Join the Meraki Community</h3>
+        <p>We invite you to join the Meraki community and embark on a journey to healthier, more radiant skin. Explore our range of products, discover your skincare routine, and experience the transformative power of Meraki Handmade Skincare.</p>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section id="brand-story" class="brand-story">
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="static\images\logo.jpeg" alt="Our Story">
+                </div>
+                <div class="story-text">
+                    <p>At Meraki Handmade, we believe that beauty starts with healthy skin. Our journey began with a simple mission: to provide high-quality skincare products that enhance your natural radiance and boost your confidence.</p>
+                    <p>Our philosophy is rooted in the understanding that everyone's skin is unique. That's why we've meticulously crafted our products with the finest ingredients sourced from nature. From luxurious cleansers and nourishing moisturizers to targeted treatments for specific concerns, each product in our range is designed to deliver visible results without compromise.</p>
+                    <p>Quality is at the heart of everything we do. We formulate our products in small batches to ensure freshness and potency. Our team of skincare experts and scientists work tirelessly to research and develop innovative solutions that address your skincare needs effectively and safely.</p>
+                    <p>We are committed to transparency and honesty. Our products are free from harsh chemicals, parabens, and artificial fragrances. We also strive to minimize our environmental footprint by using eco-friendly packaging and reducing waste wherever possible.</p>
+                    <p>Join the Meraki Handmade community and embark on a journey to healthier, more radiant skin. We are here to empower you to embrace your natural beauty and radiate confidence in your own skin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Products Section -->
+    <section id="main-products" class="main-products">
+        <h2>Our Main Products</h2>
+        <div class="products-container">
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61oj-fQ4RDL.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description of Product 1.</p>
+                <p class="price">Rs. 29.99</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQGeU_0dBLI49OzNvoKgh9WhWBgBvDDPwhhkOV_KDDIHxLf886MaB61b1gbotNFx8TTXA9C0MGTBF6FiylZO2Tfpez5sxbVUkc-w5_7_b51TPdGoBQwL_HXVsL0fBrSh4BE2Ywxcus&usqp=CAc" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2.</p>
+                <p class="price">Rs.39.99</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTGUZkQpEr2clQJrHk_u0aevi_k2Tp24SYEwFKdBw0WaZk3RsFIGRBD87xf-7aTvUff87wCX8UBgbXQ1mfUhcxcujotDiNb0M6G9QK0je48KFGZtzMxSa0__B8Hm1Gbo7IO9kfgfDI&usqp=CAc" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Description of Product 3.</p>
+                <p class="price">Rs.49.99</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero-section">
+        <img src="hero-image.jpg" alt="Brand Image">
+        <div class="hero-text">
+            <a href="products.html" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+{% endblock %}

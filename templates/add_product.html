@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Product{% endblock %}
+
+{% block content %}
+    <h2>Add Product</h2>
+    <form method="POST" action="{{ url_for('add_product') }}" enctype="multipart/form-data">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" required>
+        <br>
+        <br>
+        <label for="details">Description:</label>
+        <input type="text" id="details" name="details" required>
+        <br>
+        <label for="category">Category:</label>
+        <select id="category" name="category" onchange="toggleNewCategory()">
+            <option value="Skin Care">Skin Care</option>
+            <option value="Body Care">Body Care</option>
+            <option value="Hair Care">Hair Care</option>
+            <option value="Others">Others</option>
+        </select>
+        <br>
+        <div id="new-category-container" style="display: none;">
+            <label for="new_category">New Category:</label>
+            <input type="text" id="new_category" name="new_category">
+            <br>
+        </div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+        <br>
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image">
+        <br>
+        <button type="submit">Add Product</button>
+    </form>
+    <form action="{{ url_for('manage_products') }}" method="GET">
+        <button type="submit">Manage Products</button>
+    </form>
+    <script>
+        function toggleNewCategory() {
+            var categorySelect = document.getElementById('category');
+            var newCategoryContainer = document.getElementById('new-category-container');
+            if (categorySelect.value === 'Others') {
+                newCategoryContainer.style.display = 'block';
+            } else {
+                newCategoryContainer.style.display = 'none';
+            }
+        }
+    </script>
+{% endblock %}

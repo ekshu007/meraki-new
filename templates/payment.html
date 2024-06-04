@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e5ab; /* Changed to skin color */
+    color: #333; /* Changed text color to a dark grey */
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff5e1; /* Internal box color changed to a lighter skin color */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the form */
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  .buy-button {
+    background-color: #FFA500; /* Orange background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 16px; /* Font size */
+  }
+
+  .buy-button:hover {
+    background-color: #FF8C00; /* Darker shade of orange on hover */
+  }
+
+  select {
+    height: 40px;
+  }
+
+  button[type="submit"] {
+    background-color: #e09e45; /* Changed button color to a complementary shade */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+  }
+
+  button[type="submit"]:hover {
+    background-color: #f0a54a; /* Changed hover color to a lighter complementary shade */
+  }
+</style>
+<div class="container">
+  <h1>Payment</h1>
+  <form class="payment-form" action="" method="post">
+    <label for="card-number">Card Number:</label>
+    <input type="text" id="card-number" name="card-number" required>
+
+    <label for="expiration-date">Expiration Date:</label>
+    <input type="text" id="expiration-date" name="expiration-date" required>
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required>
+
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount" required>
+    <label for="Email">Email:</label>
+    <input type="text" id="email" name="email" required>
+    <br>
+    <br>
+    <button type="button" class="buy-button">Buy</button>
+  </form>
+</div>
+{% endblock %}
